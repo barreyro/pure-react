@@ -17,6 +17,11 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loaders: ['babel-loader?presets[]=es2015,presets[]=stage-0,presets[]=react'],
+      },
+      {
+          test: /\.json$/,
+          exclude: /node_modules/,
+          loader: "json-loader"
       }
     ]
   }
