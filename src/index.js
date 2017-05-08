@@ -10,7 +10,7 @@ render(
   <h1 id="title"
       className='header'
       style={style}>
-  Hello World
+  Hello World!
   </h1>,
   document.getElementById('react-container')
 )

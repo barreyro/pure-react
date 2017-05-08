@@ -3,7 +3,6 @@
 var _ReactDOM = ReactDOM,
     render = _ReactDOM.render;
 
-
 var style = {
   backgroundColor: '#151837',
   color: 'white',
