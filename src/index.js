@@ -1,17 +1,10 @@
-import React from 'react'
-import { render } from 'react-dom'
-import { hello, goodbye } from './lib'
+import React from 'react';
+import { render } from 'react-dom';
+import { MakeUpDayCount } from '../MakeUpDayCounts';
 
-const style = {
-  backgroundColor: '#151837',
-  color: 'white',
-  fontFamily: 'verdana'
-}
+window.Reaact = React
 
 render(
-  <div>
-    {hello},
-    {goodbye}
-  </div>,
+  <MakeUpDayCount/>,
   document.getElementById('react-container')
 )
