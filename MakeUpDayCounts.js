@@ -1,7 +1,7 @@
-import React from 'react';
+import { Component }from 'react';
 import './src/stylesheets/ui.scss';
 
-export class MakeUpDayCount extends React.Component {
+export class MakeUpDayCount extends Component {
   percentToDecimal(decimal) {
     return ((decimal * 100) + '%')
   }
