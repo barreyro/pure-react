@@ -1,14 +1,14 @@
 import React from 'react';
 import './src/stylesheets/ui.scss';
 
-export const MakeUpDayCount = React.createClass({
+export class MakeUpDayCount extends React.Component {
   percentToDecimal(decimal) {
     return ((decimal * 100) + '%')
-  },
+  }
 
   calcGoalProgress(total, goal){
     return this.percentToDecimal(total/goal)
-  },
+  }
 
   render() {
     return (
@@ -36,4 +36,4 @@ export const MakeUpDayCount = React.createClass({
       </div>
     )
   }
-})
+}
