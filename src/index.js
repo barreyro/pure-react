@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { MakeUpDayCount } from '../MakeUpDayCounts';
+import { MakeUpDayCount } from '../MakeUpDayCounts.js';
 
-window.Reaact = React
+window.React = React
 
 render(
   <MakeUpDayCount total={50}

@@ -1,39 +1,34 @@
-import { Component }from 'react';
 import './src/stylesheets/ui.scss';
 
-export class MakeUpDayCount extends Component {
-  percentToDecimal(decimal) {
-    return ((decimal * 100) + '%')
-  }
-
-  calcGoalProgress(total, goal){
-    return this.percentToDecimal(total/goal)
-  }
-
-  render() {
-    return (
-      <div className="make-up-day-count">
-        <div className="total-days">
-          <span> {this.props.total}</span>
-          <span>  days</span>
-        </div>
-        <div className="concealer-days">
-          <span> {this.props.concealer}</span>
-          <span>  days</span>
-        </div>
-        <div className="foundation-days">
-          <span> {this.props.foundation}</span>
-          <span>  days</span>
-        </div>
-        <div>
-          <span>
-            {this.calcGoalProgress(
-                this.props.total,
-                this.props.goal
-            )}
-          </span>
-        </div>
-      </div>
-    )
-  }
+const percentToDecimal = (decimal) => {
+  return ((decimal * 100) + '%')
 }
+
+const calcGoalProgress = (total, goal) => {
+  return percentToDecimal(total/goal)
+}
+
+export const MakeUpDayCount = ({total, concealer, foundation, goal}) => (
+  <div className="make-up-day-count">
+    <div className="total-days">
+      <span>{total}</span>
+      <span>days</span>
+    </div>
+    <div className="concealer-days">
+      <span>{concealer}</span>
+      <span>days</span>
+    </div>
+    <div className="foundation-days">
+      <span>{foundation}</span>
+      <span>days</span>
+    </div>
+    <div>
+      <span>
+        {calcGoalProgress(
+            total,
+            goal
+        )}
+      </span>
+    </div>
+  </div>
+)
